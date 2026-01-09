@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TravelSphereEvents</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#135bec",
+          "background-light": "#f6f6f8",
+          "background-dark": "#101622",
+        },
+        fontFamily: {
+          "display": ["Plus Jakarta Sans", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body {
+    min-height: max(884px, 100dvh);
+  }
+  .image-hover:hover img {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <div class="flex items-center justify-between p-4 max-w-lg mx-auto">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary text-3xl">public</span>
+    </div>
+    <h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">TravelSphereEvents</h1>
+    <a class="flex items-center justify-center size-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" href="#contact">
+      <span class="material-symbols-outlined text-slate-600 dark:text-slate-300">call</span>
+    </a>
+  </div>
+</nav>
+
+<div class="max-w-lg mx-auto flex flex-col min-h-screen">
+
+  <!-- Hero Section -->
+  <header class="p-4 pt-2">
+    <div class="relative overflow-hidden rounded-2xl shadow-lg image-hover transition-all duration-500">
+      <a href="https://thumbs.dreamstime.com/b/beach-wedding-reception-long-table-string-lights-candles-create-elegant-twilight-celebration-blending-natural-beauty-385117620.jpg" target="_blank" class="block">
+        <img src="https://thumbs.dreamstime.com/b/beach-wedding-reception-long-table-string-lights-candles-create-elegant-twilight-celebration-blending-natural-beauty-385117620.jpg" alt="Corporate event setup on beach at sunset" class="w-full h-[480px] object-cover">
+      </a>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-end p-6 pb-10 text-center">
+        <span class="mb-3 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+          Premier Solutions
+        </span>
+        <h2 class="mb-2 text-4xl font-black leading-tight tracking-tight text-white drop-shadow-md">
+          TravelSphere<br/>Events
+        </h2>
+        <p class="mb-6 text-base font-medium text-slate-100 drop-shadow-sm max-w-xs">
+          One Destination for Travel &amp; Corporate Event Solutions
+        </p>
+        <div class="flex w-full gap-3">
+          <a class="flex-1 flex items-center justify-center rounded-lg bg-primary h-12 px-6 text-base font-bold text-white shadow-lg shadow-primary/30 transition hover:bg-primary/90" href="#services">
+            Get Started
+          </a>
+          <a class="flex-1 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md h-12 px-6 text-base font-bold text-white border border-white/30 hover:bg-white/30 transition" href="#contact">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section Header -->
+  <div class="px-4 py-6" id="services">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Our Services</h2>
+      <span class="text-xs font-semibold uppercase text-primary tracking-wider">Explore All</span>
+    </div>
+    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Tailored solutions for your corporate needs</p>
+  </div>
+
+  <!-- Service Card: Ticket Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/airplane-wing-flying-above-clouds-golden-hour-sunset-airplane-wing-flying-above-clouds-breathtaking-golden-365350741.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/airplane-wing-flying-above-clouds-golden-hour-sunset-airplane-wing-flying-above-clouds-breathtaking-golden-365350741.jpg" alt="Airplane wing view above clouds during sunset" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">flight_takeoff</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Ticket Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Comprehensive booking solutions for flights, trains, and buses. We ensure seamless connectivity...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: Taxi Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://images.pexels.com/photos/10054998/pexels-photo-10054998.jpeg" target="_blank" class="block overflow-hidden">
+        <img src="https://images.pexels.com/photos/10054998/pexels-photo-10054998.jpeg" alt="Black luxury sedan car interior leather seats" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">local_taxi</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Taxi Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Reliable and premium chauffeur services. From airport transfers to city commutes...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: Hotel Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/luxurious-hotel-bedroom-city-view-night-modern-elegant-hotel-bedroom-featuring-large-bed-ambient-lighting-317313681.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/luxurious-hotel-bedroom-city-view-night-modern-elegant-hotel-bedroom-featuring-large-bed-ambient-lighting-317313681.jpg" alt="Modern luxury hotel bedroom with city view" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">hotel</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Hotel Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Experience luxury and comfort with our curated selection of top-rated hotels...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: PA System Services -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/close-up-mixing-board-knobs-buttons-colorful-illuminated-soundboard-various-412668765.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/close-up-mixing-board-knobs-buttons-colorful-illuminated-soundboard-various-412668765.jpg" alt="Audio mixing console with colorful lights" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">speaker_group</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">PA System Services</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Professional sound solutions for events with high-quality PA systems and expert setup.
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+</div>
+</body>
+</html><!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TravelSphereEvents</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#135bec",
+          "background-light": "#f6f6f8",
+          "background-dark": "#101622",
+        },
+        fontFamily: {
+          "display": ["Plus Jakarta Sans", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body {
+    min-height: max(884px, 100dvh);
+  }
+  .image-hover:hover img {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <div class="flex items-center justify-between p-4 max-w-lg mx-auto">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary text-3xl">public</span>
+    </div>
+    <h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">TravelSphereEvents</h1>
+    <a class="flex items-center justify-center size-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" href="#contact">
+      <span class="material-symbols-outlined text-slate-600 dark:text-slate-300">call</span>
+    </a>
+  </div>
+</nav>
+
+<div class="max-w-lg mx-auto flex flex-col min-h-screen">
+
+  <!-- Hero Section -->
+  <header class="p-4 pt-2">
+    <div class="relative overflow-hidden rounded-2xl shadow-lg image-hover transition-all duration-500">
+      <a href="https://thumbs.dreamstime.com/b/beach-wedding-reception-long-table-string-lights-candles-create-elegant-twilight-celebration-blending-natural-beauty-385117620.jpg" target="_blank" class="block">
+        <img src="https://thumbs.dreamstime.com/b/beach-wedding-reception-long-table-string-lights-candles-create-elegant-twilight-celebration-blending-natural-beauty-385117620.jpg" alt="Corporate event setup on beach at sunset" class="w-full h-[480px] object-cover">
+      </a>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-end p-6 pb-10 text-center">
+        <span class="mb-3 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+          Premier Solutions
+        </span>
+        <h2 class="mb-2 text-4xl font-black leading-tight tracking-tight text-white drop-shadow-md">
+          TravelSphere<br/>Events
+        </h2>
+        <p class="mb-6 text-base font-medium text-slate-100 drop-shadow-sm max-w-xs">
+          One Destination for Travel &amp; Corporate Event Solutions
+        </p>
+        <div class="flex w-full gap-3">
+          <a class="flex-1 flex items-center justify-center rounded-lg bg-primary h-12 px-6 text-base font-bold text-white shadow-lg shadow-primary/30 transition hover:bg-primary/90" href="#services">
+            Get Started
+          </a>
+          <a class="flex-1 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md h-12 px-6 text-base font-bold text-white border border-white/30 hover:bg-white/30 transition" href="#contact">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section Header -->
+  <div class="px-4 py-6" id="services">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Our Services</h2>
+      <span class="text-xs font-semibold uppercase text-primary tracking-wider">Explore All</span>
+    </div>
+    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Tailored solutions for your corporate needs</p>
+  </div>
+
+  <!-- Service Card: Ticket Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/airplane-wing-flying-above-clouds-golden-hour-sunset-airplane-wing-flying-above-clouds-breathtaking-golden-365350741.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/airplane-wing-flying-above-clouds-golden-hour-sunset-airplane-wing-flying-above-clouds-breathtaking-golden-365350741.jpg" alt="Airplane wing view above clouds during sunset" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">flight_takeoff</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Ticket Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Comprehensive booking solutions for flights, trains, and buses. We ensure seamless connectivity...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: Taxi Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://images.pexels.com/photos/10054998/pexels-photo-10054998.jpeg" target="_blank" class="block overflow-hidden">
+        <img src="https://images.pexels.com/photos/10054998/pexels-photo-10054998.jpeg" alt="Black luxury sedan car interior leather seats" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">local_taxi</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Taxi Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Reliable and premium chauffeur services. From airport transfers to city commutes...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: Hotel Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/luxurious-hotel-bedroom-city-view-night-modern-elegant-hotel-bedroom-featuring-large-bed-ambient-lighting-317313681.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/luxurious-hotel-bedroom-city-view-night-modern-elegant-hotel-bedroom-featuring-large-bed-ambient-lighting-317313681.jpg" alt="Modern luxury hotel bedroom with city view" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">hotel</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Hotel Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Experience luxury and comfort with our curated selection of top-rated hotels...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: PA System Services -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/close-up-mixing-board-knobs-buttons-colorful-illuminated-soundboard-various-412668765.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/close-up-mixing-board-knobs-buttons-colorful-illuminated-soundboard-various-412668765.jpg" alt="Audio mixing console with colorful lights" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">speaker_group</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">PA System Services</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Professional sound solutions for events with high-quality PA systems and expert setup.
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+</div>
+</body>
+</html>
