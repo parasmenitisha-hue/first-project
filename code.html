@@ -1,223 +1,365 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TravelSphereEvents</title>
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Config -->
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-            extend: {
-                colors: {
-                "primary": "#135bec",
-                "background-light": "#f6f6f8",
-                "background-dark": "#101622",
-                },
-                fontFamily: {
-                "display": ["Plus Jakarta Sans", "sans-serif"],
-                "body": ["Noto Sans", "sans-serif"],
-                },
-                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-            },
-            },
-        }
-    </script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#135bec",
+          "background-light": "#f6f6f8",
+          "background-dark": "#101622",
+        },
+        fontFamily: {
+          "display": ["Plus Jakarta Sans", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
 <style>
-        html { scroll-behavior: smooth; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    </style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body {
+    min-height: max(884px, 100dvh);
+  }
+  .image-hover:hover img {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <div class="flex items-center justify-between p-4 max-w-lg mx-auto">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary text-3xl">public</span>
+    </div>
+    <h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">TravelSphereEvents</h1>
+    <a class="flex items-center justify-center size-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" href="#contact">
+      <span class="material-symbols-outlined text-slate-600 dark:text-slate-300">call</span>
+    </a>
+  </div>
+</nav>
+
+<div class="max-w-lg mx-auto flex flex-col min-h-screen">
+
+  <!-- Hero Section -->
+  <header class="p-4 pt-2">
+    <div class="relative overflow-hidden rounded-2xl shadow-lg image-hover transition-all duration-500">
+      <a href="https://thumbs.dreamstime.com/b/beach-wedding-reception-long-table-string-lights-candles-create-elegant-twilight-celebration-blending-natural-beauty-385117620.jpg" target="_blank" class="block">
+        <img src="https://thumbs.dreamstime.com/b/beach-wedding-reception-long-table-string-lights-candles-create-elegant-twilight-celebration-blending-natural-beauty-385117620.jpg" alt="Corporate event setup on beach at sunset" class="w-full h-[480px] object-cover">
+      </a>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-end p-6 pb-10 text-center">
+        <span class="mb-3 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+          Premier Solutions
+        </span>
+        <h2 class="mb-2 text-4xl font-black leading-tight tracking-tight text-white drop-shadow-md">
+          TravelSphere<br/>Events
+        </h2>
+        <p class="mb-6 text-base font-medium text-slate-100 drop-shadow-sm max-w-xs">
+          One Destination for Travel &amp; Corporate Event Solutions
+        </p>
+        <div class="flex w-full gap-3">
+          <a class="flex-1 flex items-center justify-center rounded-lg bg-primary h-12 px-6 text-base font-bold text-white shadow-lg shadow-primary/30 transition hover:bg-primary/90" href="#services">
+            Get Started
+          </a>
+          <a class="flex-1 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md h-12 px-6 text-base font-bold text-white border border-white/30 hover:bg-white/30 transition" href="#contact">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section Header -->
+  <div class="px-4 py-6" id="services">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Our Services</h2>
+      <span class="text-xs font-semibold uppercase text-primary tracking-wider">Explore All</span>
+    </div>
+    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Tailored solutions for your corporate needs</p>
+  </div>
+
+  <!-- Service Card: Ticket Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/airplane-wing-flying-above-clouds-golden-hour-sunset-airplane-wing-flying-above-clouds-breathtaking-golden-365350741.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/airplane-wing-flying-above-clouds-golden-hour-sunset-airplane-wing-flying-above-clouds-breathtaking-golden-365350741.jpg" alt="Airplane wing view above clouds during sunset" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">flight_takeoff</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Ticket Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Comprehensive booking solutions for flights, trains, and buses. We ensure seamless connectivity...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: Taxi Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://images.pexels.com/photos/10054998/pexels-photo-10054998.jpeg" target="_blank" class="block overflow-hidden">
+        <img src="https://images.pexels.com/photos/10054998/pexels-photo-10054998.jpeg" alt="Black luxury sedan car interior leather seats" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">local_taxi</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Taxi Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Reliable and premium chauffeur services. From airport transfers to city commutes...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: Hotel Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/luxurious-hotel-bedroom-city-view-night-modern-elegant-hotel-bedroom-featuring-large-bed-ambient-lighting-317313681.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/luxurious-hotel-bedroom-city-view-night-modern-elegant-hotel-bedroom-featuring-large-bed-ambient-lighting-317313681.jpg" alt="Modern luxury hotel bedroom with city view" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">hotel</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Hotel Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Experience luxury and comfort with our curated selection of top-rated hotels...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: PA System Services -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/close-up-mixing-board-knobs-buttons-colorful-illuminated-soundboard-various-412668765.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/close-up-mixing-board-knobs-buttons-colorful-illuminated-soundboard-various-412668765.jpg" alt="Audio mixing console with colorful lights" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">speaker_group</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">PA System Services</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Professional sound solutions for events with high-quality PA systems and expert setup.
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+</div>
+</body>
+</html><!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TravelSphereEvents</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#135bec",
+          "background-light": "#f6f6f8",
+          "background-dark": "#101622",
+        },
+        fontFamily: {
+          "display": ["Plus Jakarta Sans", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
 <style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121b]">
-<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800">
-<div class="flex items-center justify-between p-4 pb-2">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary" style="font-size: 32px;">travel_explore</span>
-<h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">TravelSphereEvents</h2>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body {
+    min-height: max(884px, 100dvh);
+  }
+  .image-hover:hover img {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <div class="flex items-center justify-between p-4 max-w-lg mx-auto">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary text-3xl">public</span>
+    </div>
+    <h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">TravelSphereEvents</h1>
+    <a class="flex items-center justify-center size-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" href="#contact">
+      <span class="material-symbols-outlined text-slate-600 dark:text-slate-300">call</span>
+    </a>
+  </div>
+</nav>
+
+<div class="max-w-lg mx-auto flex flex-col min-h-screen">
+
+  <!-- Hero Section -->
+  <header class="p-4 pt-2">
+    <div class="relative overflow-hidden rounded-2xl shadow-lg image-hover transition-all duration-500">
+      <a href="https://thumbs.dreamstime.com/b/beach-wedding-reception-long-table-string-lights-candles-create-elegant-twilight-celebration-blending-natural-beauty-385117620.jpg" target="_blank" class="block">
+        <img src="https://thumbs.dreamstime.com/b/beach-wedding-reception-long-table-string-lights-candles-create-elegant-twilight-celebration-blending-natural-beauty-385117620.jpg" alt="Corporate event setup on beach at sunset" class="w-full h-[480px] object-cover">
+      </a>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-end p-6 pb-10 text-center">
+        <span class="mb-3 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+          Premier Solutions
+        </span>
+        <h2 class="mb-2 text-4xl font-black leading-tight tracking-tight text-white drop-shadow-md">
+          TravelSphere<br/>Events
+        </h2>
+        <p class="mb-6 text-base font-medium text-slate-100 drop-shadow-sm max-w-xs">
+          One Destination for Travel &amp; Corporate Event Solutions
+        </p>
+        <div class="flex w-full gap-3">
+          <a class="flex-1 flex items-center justify-center rounded-lg bg-primary h-12 px-6 text-base font-bold text-white shadow-lg shadow-primary/30 transition hover:bg-primary/90" href="#services">
+            Get Started
+          </a>
+          <a class="flex-1 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md h-12 px-6 text-base font-bold text-white border border-white/30 hover:bg-white/30 transition" href="#contact">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section Header -->
+  <div class="px-4 py-6" id="services">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Our Services</h2>
+      <span class="text-xs font-semibold uppercase text-primary tracking-wider">Explore All</span>
+    </div>
+    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Tailored solutions for your corporate needs</p>
+  </div>
+
+  <!-- Service Card: Ticket Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/airplane-wing-flying-above-clouds-golden-hour-sunset-airplane-wing-flying-above-clouds-breathtaking-golden-365350741.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/airplane-wing-flying-above-clouds-golden-hour-sunset-airplane-wing-flying-above-clouds-breathtaking-golden-365350741.jpg" alt="Airplane wing view above clouds during sunset" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">flight_takeoff</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Ticket Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Comprehensive booking solutions for flights, trains, and buses. We ensure seamless connectivity...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: Taxi Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://images.pexels.com/photos/10054998/pexels-photo-10054998.jpeg" target="_blank" class="block overflow-hidden">
+        <img src="https://images.pexels.com/photos/10054998/pexels-photo-10054998.jpeg" alt="Black luxury sedan car interior leather seats" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">local_taxi</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Taxi Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Reliable and premium chauffeur services. From airport transfers to city commutes...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: Hotel Booking -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/luxurious-hotel-bedroom-city-view-night-modern-elegant-hotel-bedroom-featuring-large-bed-ambient-lighting-317313681.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/luxurious-hotel-bedroom-city-view-night-modern-elegant-hotel-bedroom-featuring-large-bed-ambient-lighting-317313681.jpg" alt="Modern luxury hotel bedroom with city view" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">hotel</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Hotel Booking</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Experience luxury and comfort with our curated selection of top-rated hotels...
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service Card: PA System Services -->
+  <article class="px-4 pb-6">
+    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700/50 transition hover:shadow-md image-hover">
+      <a href="https://thumbs.dreamstime.com/b/close-up-mixing-board-knobs-buttons-colorful-illuminated-soundboard-various-412668765.jpg" target="_blank" class="block overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/close-up-mixing-board-knobs-buttons-colorful-illuminated-soundboard-various-412668765.jpg" alt="Audio mixing console with colorful lights" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+      </a>
+      <div class="flex flex-col p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-primary">speaker_group</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">PA System Services</h3>
+        </div>
+        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          Professional sound solutions for events with high-quality PA systems and expert setup.
+        </p>
+        <button class="self-start text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+          Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </article>
+
 </div>
-<button class="flex size-12 items-center justify-center rounded-lg text-[#0d121b] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="@container" id="home">
-<div class="@[480px]:p-4">
-<div class="relative flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-6 text-center" data-alt="Stunning landscape collage of travel destinations and corporate event setups" style='background-image: linear-gradient(rgba(19, 91, 236, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJVTaO6caXQR5DnVQhXOArw4hCGpTGG0b74JyHIn47qic1jxZ42AmWSUryN5WprNUgnsot-0SUcgPvyXqqOXExRxMbFUg6kVv3aWI_sr2obh2-pYdQenO3dgJIX623V0LTAtAKtG_x_CJOCwFwdbqAaaYX7nY6Lz_um5gvobARIY7swSIYJLNxz-MjelTuPU0fLxEruKXb84DjQJGvXwLO9MC_zCNCp6kiyN72uQnR6CIbRikZgBvpzH3OOIXJY2Zam1SPQaPgm24");'>
-<div class="flex flex-col gap-3 max-w-lg mx-auto">
-<h2 class="text-white/90 text-sm font-bold uppercase tracking-widest">TravelSphereEvents</h2>
-<h1 class="text-white text-4xl font-extrabold leading-tight tracking-[-0.033em] @[480px]:text-5xl drop-shadow-lg">
-                            One Destination for Travel &amp; Corporate Event Solutions
-                        </h1>
-<p class="text-white/80 text-base font-medium mt-2">
-                            Planning your next big trip or corporate gathering has never been easier.
-                        </p>
-</div>
-<div class="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
-<a class="flex-1 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-blue-700 transition-colors text-white text-base font-bold shadow-lg" href="#services">
-                            Plan Your Event
-                        </a>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Headline -->
-<section class="pt-8 px-4" id="services">
-<div class="flex items-center gap-2 mb-2">
-<span class="h-8 w-1 bg-primary rounded-full"></span>
-<h2 class="text-[#0d121b] dark:text-white tracking-tight text-[28px] font-bold leading-tight">Our Services</h2>
-</div>
-<p class="text-gray-500 dark:text-gray-400 text-sm pl-3">Comprehensive solutions for every journey and event.</p>
-</section>
-<!-- Service Cards Stack -->
-<div class="flex flex-col gap-4 p-4 pb-8">
-<!-- Card 1: Ticket Booking -->
-<article class="group relative flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-[#1a2233] shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-100 dark:border-gray-800">
-<div class="w-full h-48 bg-center bg-no-repeat bg-cover" data-alt="Airplane wing view above clouds during sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAI7FtemmG1yXyQe0PKHhvdMsZkkoa97vTJKPJ5dzudnAE3KYsQvGIMbEynwRwIMPEnZzxv0NV1AMOgx4L58j1f8TJDLdSrH8zemTVblTyMmD4QPhIVjXWCy4qk64v5Zgo3BRaS5oWnYVgIxeiUuvO5hVufo5P3XBQjNtPfB0aVg326oSRv47q__SapHmo8AzNapKbfZGGFfJ6q_r7O2tbQxbJXTQ3KSCfVZI5_8sJh8lz8i7fESY7acbceLVSjpedFz1uF3wAD-oA");'>
-<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 text-primary">
-<span class="material-symbols-outlined block">flight_takeoff</span>
-</div>
-</div>
-<div class="flex flex-col gap-2 p-5">
-<h3 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight">Ticket Booking</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        Experience seamless travel planning with our comprehensive ticket booking service. Whether you're flying domestic or international, taking a train, or catching a bus, we secure the best routes and prices for your journey, ensuring a stress-free start to your travel adventure.
-                    </p>
-</div>
-</article>
-<!-- Card 2: Taxi Booking -->
-<article class="group relative flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-[#1a2233] shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-100 dark:border-gray-800">
-<div class="w-full h-48 bg-center bg-no-repeat bg-cover" data-alt="Luxury black taxi car interior or exterior on a city street" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxqWquE2RI6I8kUuGXfjj-ZqCcy3mfhWanu-TRQhrLDTdrsdCG9_hk4FqbnKM0JW5NTAuqH0s0pZLi_dY9RmxJElxIG_eiJOQrlIpkh9HaF1Rv7YkXXp_lNp7GBZ4atMEglrddiQwzoImvkgLRAqpJxrNux6Dx6Zwm89HvKGTlJPvrwk5wdrxo0NvZ51MFuZB2-ngJVf8U2UqpT-wSVEq-uXQZy4UBgiOnlrEworYVWI4fJS5OLMk-Wgm93BstY0AXKyIOg9IYwww");'>
-<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 text-primary">
-<span class="material-symbols-outlined block">local_taxi</span>
-</div>
-</div>
-<div class="flex flex-col gap-2 p-5">
-<h3 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight">Taxi Booking</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        Reliable and comfortable taxi services tailored for your transfers. From prompt airport pickups to scenic city tours, our well-maintained fleet and professional drivers ensure a smooth, safe, and punctual ride every time you travel with us locally or outstation.
-                    </p>
-</div>
-</article>
-<!-- Card 3: Hotel Booking -->
-<article class="group relative flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-[#1a2233] shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-100 dark:border-gray-800">
-<div class="w-full h-48 bg-center bg-no-repeat bg-cover" data-alt="Modern luxury hotel bedroom interior with nice view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWFQ1gun5RMz9gL1UtGLx58EOZ5Adzm6e-kEzAwx2X5WcJVKTeFT2Nc-glFhXNeKxXxFBHuJ2o70xn9RhgH6NHofQB2mz2PMXLg57VfIbzwpM-HHJVNLPmo4Mujyem-b6GJUo4R5FkXKlRZyZ4ongUhj0YldxcKBU_11Rbrj-dbHNmOTDUMDi21PUfcluBpayo-OH5JUzDFtX3WIyojSP7AJvpctiuAdHNQ_GZyUnMf0Wu5A4GWeOXws7TSrlLGJh_r_fm9Fd8W3E");'>
-<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 text-primary">
-<span class="material-symbols-outlined block">hotel</span>
-</div>
-</div>
-<div class="flex flex-col gap-2 p-5">
-<h3 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight">Hotel Booking</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        Find your perfect home away from home. We partner with top-rated hotels worldwide to offer you luxurious yet affordable stays. From boutique suites to corporate-friendly accommodations, we ensure comfort, amenities, and convenience wherever you choose to stay.
-                    </p>
-</div>
-</article>
-<!-- Card 4: PA System Services -->
-<article class="group relative flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-[#1a2233] shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-100 dark:border-gray-800">
-<div class="w-full h-48 bg-center bg-no-repeat bg-cover" data-alt="Professional audio equipment mixing console at a concert" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1CZqh_GeGBKRCjQ_RC6VFm5OSriV9242NMkeCLMlAybWhCZf1DsLuDgwTjL5w89BOMRlcebo3zJAdvb5vso7-cBBagE-mSxYZRSnHDu84s-4_oTqQJJ9geIPVOoQeddY5Fj4a9YGjfMSS8KxNiqFInZpXAWZ0l94FJTag5xu6LmGLPkYXav477imqUJTRkpUf5myQQX8UX9W2UMSgS_czYMqPj-FhKLz5hTUVMMOdnR3CZV11HyxGd951565vS_HryAIopX1ljlA");'>
-<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 text-primary">
-<span class="material-symbols-outlined block">speaker_group</span>
-</div>
-</div>
-<div class="flex flex-col gap-2 p-5">
-<h3 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight">PA System Services</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        Ensure your message is heard loud and clear. We provide state-of-the-art Public Address systems for events of all sizes. Our high-quality audio equipment ensures crystal clear sound delivery for conferences, weddings, and public gatherings, backed by technical support.
-                    </p>
-</div>
-</article>
-<!-- Card 5: Corporate Event Management -->
-<article class="group relative flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-[#1a2233] shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-100 dark:border-gray-800">
-<div class="w-full h-48 bg-center bg-no-repeat bg-cover" data-alt="Business conference hall with people clapping" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBi49qH4csF8e5rohelORo67o6aY-fYNjIqtizGfNfD9vZXyzta06ONPHIz56KVq-qQ-ge5kBqdXyG1cn9tT0eULF0YaBx0jQmwbLz6GTuECw_WdAGe07IH1kgtzHCV5Ts5seS3YXf-Il3a2DV15jZI4ZWGE-dOwOjrztGz4Fe0FBdVNfzgQcCijYRD4qkyF2vKWKN__S0ghc4U5tSeeT-5T4KqMuAi_rFuDvAgxhyonFcVONDJNOjOphNYjtXXfjDxWPkq_0wOAlk");'>
-<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 text-primary">
-<span class="material-symbols-outlined block">groups</span>
-</div>
-</div>
-<div class="flex flex-col gap-2 p-5">
-<h3 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight">Corporate Event Management</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        Elevate your business gatherings with our expert event management. From venue selection to logistics and catering, we handle every detail of your conferences, seminars, and team retreats, allowing you to focus on connecting with your team and clients without the stress.
-                    </p>
-</div>
-</article>
-</div>
-<!-- CTA Section -->
-<section class="bg-[#101622] text-white py-12 px-6 text-center">
-<h2 class="text-3xl font-extrabold mb-4 tracking-tight">Ready to plan your next journey?</h2>
-<p class="text-gray-300 mb-8 max-w-md mx-auto">Contact us today to get a quote for your travel or event needs. Our team is ready to assist you.</p>
-<div class="flex flex-col sm:flex-row justify-center gap-4">
-<a class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-primary hover:bg-blue-600 text-white font-bold transition-all transform hover:scale-105" href="#contact">
-                    Get Started
-                </a>
-<a class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold border border-white/20 transition-all" href="#contact">
-                    Contact Us
-                </a>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-white dark:bg-[#0b0f17] pt-10 pb-6 border-t border-gray-100 dark:border-gray-800" id="contact">
-<div class="container mx-auto px-6 flex flex-col items-center">
-<!-- Brand -->
-<div class="flex items-center gap-2 mb-6">
-<span class="material-symbols-outlined text-primary" style="font-size: 32px;">travel_explore</span>
-<span class="text-xl font-bold text-[#0d121b] dark:text-white">TravelSphereEvents</span>
-</div>
-<!-- Contact Info -->
-<div class="w-full max-w-md space-y-3 mb-8">
-<a class="flex items-center gap-4 p-4 rounded-xl bg-background-light dark:bg-[#1a2233] hover:bg-primary/5 transition-colors group" href="tel:9783333907">
-<div class="bg-primary/10 rounded-full p-2 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-<span class="material-symbols-outlined block">call</span>
-</div>
-<div class="flex flex-col">
-<span class="text-xs text-gray-500 font-bold uppercase">Call Us</span>
-<span class="text-[#0d121b] dark:text-white font-medium">9783333907</span>
-</div>
-</a>
-<a class="flex items-center gap-4 p-4 rounded-xl bg-background-light dark:bg-[#1a2233] hover:bg-primary/5 transition-colors group" href="mailto:infotravelsphereevents@gmail.com">
-<div class="bg-primary/10 rounded-full p-2 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-<span class="material-symbols-outlined block">mail</span>
-</div>
-<div class="flex flex-col">
-<span class="text-xs text-gray-500 font-bold uppercase">Email Us</span>
-<span class="text-[#0d121b] dark:text-white font-medium break-all">infotravelsphereevents@gmail.com</span>
-</div>
-</a>
-</div>
-<!-- Social Links -->
-<div class="flex gap-6 mb-8">
-<a class="text-gray-400 hover:text-pink-600 transition-colors transform hover:scale-110" href="#">
-<!-- Instagram (using generic social icon as placeholder if specific not available in symbols, but using Material for visual consistency) -->
-<span class="material-symbols-outlined" style="font-size: 32px;">photo_camera</span>
-<span class="sr-only">Instagram</span>
-</a>
-<a class="text-gray-400 hover:text-blue-700 transition-colors transform hover:scale-110" href="#">
-<span class="material-symbols-outlined" style="font-size: 32px;">public</span>
-<span class="sr-only">LinkedIn</span>
-</a>
-</div>
-<!-- Copyright -->
-<div class="text-center text-gray-400 text-sm">
-<p>© 2023 TravelSphereEvents. All rights reserved.</p>
-</div>
-</div>
-</footer>
-</div>
-</body></html>
+</body>
+</html>
